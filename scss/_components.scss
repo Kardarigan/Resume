@@ -1,0 +1,147 @@
+.middleland {
+  width: 50%;
+  border-top: 3px dashed $colorAlpha;
+}
+/*-----[type]-----*/
+.typing-anima {
+  width: 8.5em;
+  animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/*-----[header]-----*/
+.cube-wrap {
+      --size: 10vmin;
+      position: fixed;
+      bottom: 14%;
+      right: 6%;
+      perspective: 100vmin;
+      z-index: 1000;
+}
+.cube {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: cube 1s linear;
+}
+@keyframes cube {
+  to {
+    transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+  }
+}
+
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: $colorAlpha;
+  backface-visibility: visible;
+  top: calc(var(--size) * -.5);
+  left: calc(var(--size) * -.5);
+  border: 5px solid $colorDark;
+  @include flex-centralizer;
+  a {
+    i {
+      color: $colorDark;
+      font-size: 2em;
+    }
+  }
+}
+.top {
+  background-color: $colorAlpha;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+}
+.bottom {
+  background-color: $colorAlpha;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+}
+.left {
+  background-color: $colorAlpha;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+}
+.right {
+  background-color: $colorAlpha;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+}
+.front {
+  background-color: $colorAlpha;
+  transform: translateZ(calc(var(--size) * .5));
+}
+.back {
+  background-color: $colorAlpha;
+  transform: translateZ(calc(var(--size) * -.5));
+}
+
+:root .cube-wrap * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+/*-------[header]-------*/
+#qmars {
+  color: $colorBeta !important;
+  font-weight: bold;
+}
+
+header {
+  height: 100vh;
+}
+/*-----[whos qmars]-----*/
+.whos {
+  @include flex-centralizer;
+  &-left {
+    border: 2px solid $colorAlpha;
+    padding-right: 20% !important;
+  }
+  &-right {
+    width: 20em;
+    height: 20em;
+    right: 5em;
+    border-radius: 50%;
+    padding-right: 10px;
+    background-color: $colorAlpha !important;
+    position: absolute;
+    color: $colorDark !important;
+  }
+}
+/*-------[skill]-------*/
+.skill {
+  @include flex-centralizer;
+  height: 70vh;
+}
+#skill {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+.progressbar {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 35px;
+  position: relative;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+.proggress {
+  height: 8px;
+  width: 10px;
+  background-color: #3498db;
+}
+/*-----[experience]-----*/
+#experience {
+  @extend #skill
+}

@@ -1,0 +1,201 @@
+* {
+  margin: 0 !important;
+  color: azure;
+  font-family: "NTR", sans-serif;
+}
+
+body {
+  background-color: rgb(4, 7, 9) !important;
+}
+
+.text-muted {
+  color: rgba(240, 255, 255, 0.551) !important;
+}
+
+.btn {
+  border-radius: 0px;
+  font-family: monospace;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5em;
+  font-weight: 900 !important;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+.middleland {
+  width: 50%;
+  border-top: 3px dashed azure;
+}
+
+/*-----[type]-----*/
+.typing-anima {
+  width: 8.5em;
+  animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/*-----[header]-----*/
+.cube-wrap {
+  --size: 10vmin;
+  position: fixed;
+  bottom: 14%;
+  right: 6%;
+  perspective: 100vmin;
+  z-index: 1000;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+  animation: cube 1s linear;
+}
+
+@keyframes cube {
+  to {
+    transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+  }
+}
+.side {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: azure;
+  backface-visibility: visible;
+  top: calc(var(--size) * -0.5);
+  left: calc(var(--size) * -0.5);
+  border: 5px solid rgb(4, 7, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side a i {
+  color: rgb(4, 7, 9);
+  font-size: 2em;
+}
+
+.top {
+  background-color: azure;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
+}
+
+.bottom {
+  background-color: azure;
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
+}
+
+.left {
+  background-color: azure;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
+}
+
+.right {
+  background-color: azure;
+  transform: rotateY(90deg) translateZ(calc(var(--size) * -0.5));
+}
+
+.front {
+  background-color: azure;
+  transform: translateZ(calc(var(--size) * 0.5));
+}
+
+.back {
+  background-color: azure;
+  transform: translateZ(calc(var(--size) * -0.5));
+}
+
+:root .cube-wrap * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/*-------[header]-------*/
+#qmars {
+  color: red !important;
+  font-weight: bold;
+}
+
+header {
+  height: 100vh;
+}
+
+/*-----[whos qmars]-----*/
+.whos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whos-left {
+  border: 2px solid azure;
+  padding-right: 20% !important;
+}
+.whos-right {
+  width: 20em;
+  height: 20em;
+  right: 5em;
+  border-radius: 50%;
+  padding-right: 10px;
+  background-color: azure !important;
+  position: absolute;
+  color: rgb(4, 7, 9) !important;
+}
+
+/*-------[skill]-------*/
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+#skill, #experience {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.progressbar {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 35px;
+  position: relative;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+
+.proggress {
+  height: 8px;
+  width: 10px;
+  background-color: #3498db;
+}
+
+/*-----[experience]-----*//*# sourceMappingURL=main.css.map */

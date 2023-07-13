@@ -1,0 +1,32 @@
+// ---------[vars]---------
+$colorAlpha: azure;
+$colorAlpha-darker: rgba(240, 255, 255, 0.551);
+$colorBeta: red;
+$colorDark: rgb(4, 7, 9);
+// ---------[mixin]---------
+@mixin flex-centralizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-starter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+@mixin flex-ender {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: start;
+}
+@mixin bgBlur {
+  background-color: rgba(240, 255, 255, 0.29);
+  backdrop-filter: blur(15px);
+}
+@mixin borderSide($color: $colorAlpha) {
+  border-left: 3px solid $color;
+}
