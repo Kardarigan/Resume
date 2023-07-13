@@ -20,7 +20,7 @@
     border-color: transparent;
   }
 }
-/*-----[header]-----*/
+/*-----[navigator]-----*/
 .cube-wrap {
       --size: 10vmin;
       position: fixed;
@@ -53,7 +53,7 @@
   a {
     i {
       color: $colorDark;
-      font-size: 2em;
+      font-size: 2vw;
     }
   }
 }
@@ -81,7 +81,6 @@
   background-color: $colorAlpha;
   transform: translateZ(calc(var(--size) * -.5));
 }
-
 :root .cube-wrap * {
   /* Pause the animation */
   animation-play-state: paused;
@@ -99,6 +98,10 @@
 
 header {
   height: 100vh;
+
+  button {
+    font-size: 1vw !important;
+  }
 }
 /*-----[whos qmars]-----*/
 .whos {

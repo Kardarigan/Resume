@@ -150,14 +150,14 @@ window.addEventListener('scroll', () => {
 
   // ============[experience]==============
   $(function () {
-    $(".imgItem1").show();
-    $(".imgItem2").hide();
-    $(".imgItem3").hide();
-    $(".imgItem4").hide();
-    $(".btnItem1").addClass("active");
-    $(".btnItem2").removeClass("active");
-    $(".btnItem3").removeClass("active");
-    $(".btnItem4").removeClass("active");
+    $(".exShow-item-1").show();
+    $(".exShow-item-2").hide();
+    $(".exShow-item-3").hide();
+    $(".exShow-item-4").hide();
+    $(".exBtn-1").addClass("active");
+    $(".exBtn-2").removeClass("active");
+    $(".exBtn-3").removeClass("active");
+    $(".exBtn-4").removeClass("active");
 
     $(".groupBox1").show();
     $(".groupBox2").hide();
@@ -173,45 +173,45 @@ window.addEventListener('scroll', () => {
     $(".groupPrev2").hide();
     $(".groupPrev3").hide();
 
-    $(".btnItem1").click(function () {
-        $(".imgItem1").show();
-        $(".imgItem2").hide();
-        $(".imgItem3").hide();
-        $(".imgItem4").hide();
-        $(".btnItem1").addClass("active");
-        $(".btnItem2").removeClass("active");
-        $(".btnItem3").removeClass("active");
-        $(".btnItem4").removeClass("active");
+    $(".exBtn-1").click(function () {
+        $(".exShow-item-1").show();
+        $(".exShow-item-2").hide();
+        $(".exShow-item-3").hide();
+        $(".exShow-item-4").hide();
+        $(".exBtn-1").addClass("active");
+        $(".exBtn-2").removeClass("active");
+        $(".exBtn-3").removeClass("active");
+        $(".exBtn-4").removeClass("active");
     });
-    $(".btnItem2").click(function () {
-        $(".imgItem1").hide();
-        $(".imgItem2").show();
-        $(".imgItem3").hide();
-        $(".imgItem4").hide();
-        $(".btnItem1").removeClass("active");
-        $(".btnItem2").addClass("active");
-        $(".btnItem3").removeClass("active");
-        $(".btnItem4").removeClass("active");
+    $(".exBtn-2").click(function () {
+        $(".exShow-item-1").hide();
+        $(".exShow-item-2").show();
+        $(".exShow-item-3").hide();
+        $(".exShow-item-4").hide();
+        $(".exBtn-1").removeClass("active");
+        $(".exBtn-2").addClass("active");
+        $(".exBtn-3").removeClass("active");
+        $(".exBtn-4").removeClass("active");
     });
-    $(".btnItem3").click(function () {
-        $(".imgItem1").hide();
-        $(".imgItem2").hide();
-        $(".imgItem3").show();
-        $(".imgItem4").hide();
-        $(".btnItem1").removeClass("active");
-        $(".btnItem2").removeClass("active");
-        $(".btnItem3").addClass("active");
-        $(".btnItem4").removeClass("active");
+    $(".exBtn-3").click(function () {
+        $(".exShow-item-1").hide();
+        $(".exShow-item-2").hide();
+        $(".exShow-item-3").show();
+        $(".exShow-item-4").hide();
+        $(".exBtn-1").removeClass("active");
+        $(".exBtn-2").removeClass("active");
+        $(".exBtn-3").addClass("active");
+        $(".exBtn-4").removeClass("active");
     });
-    $(".btnItem4").click(function () {
-        $(".imgItem1").hide();
-        $(".imgItem2").hide();
-        $(".imgItem3").hide();
-        $(".imgItem4").show();
-        $(".btnItem1").removeClass("active");
-        $(".btnItem2").removeClass("active");
-        $(".btnItem3").removeClass("active");
-        $(".btnItem4").addClass("active");
+    $(".exBtn-4").click(function () {
+        $(".exShow-item-1").hide();
+        $(".exShow-item-2").hide();
+        $(".exShow-item-3").hide();
+        $(".exShow-item-4").show();
+        $(".exBtn-1").removeClass("active");
+        $(".exBtn-2").removeClass("active");
+        $(".exBtn-3").removeClass("active");
+        $(".exBtn-4").addClass("active");
     });
     $(".group1").click(function () {
         $(".groupBox1").show();

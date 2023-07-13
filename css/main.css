@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 8vw;
   font-weight: 900 !important;
 }
 
@@ -32,7 +32,7 @@ h3 {
 }
 
 h5 {
-  font-size: 2rem;
+  font-size: 2vw;
 }
 
 .middleland {
@@ -59,7 +59,7 @@ h5 {
     border-color: transparent;
   }
 }
-/*-----[header]-----*/
+/*-----[navigator]-----*/
 .cube-wrap {
   --size: 10vmin;
   position: fixed;
@@ -95,7 +95,7 @@ h5 {
 }
 .side a i {
   color: rgb(4, 7, 9);
-  font-size: 2em;
+  font-size: 2vw;
 }
 
 .top {
@@ -146,6 +146,9 @@ h5 {
 
 header {
   height: 100vh;
+}
+header button {
+  font-size: 1vw !important;
 }
 
 /*-----[whos qmars]-----*/
