@@ -201,4 +201,10 @@ header button {
   background-color: #3498db;
 }
 
-/*-----[experience]-----*//*# sourceMappingURL=main.css.map */
+/*-----[experience]-----*/
+.exBtn-Active {
+  border: 10px solid red;
+}
+.exBtn-Active:focus {
+  border-color: blue;
+}/*# sourceMappingURL=main.css.map */

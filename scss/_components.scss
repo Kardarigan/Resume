@@ -148,3 +148,11 @@ header {
 #experience {
   @extend #skill
 }
+.exBtn {
+  &-Active{
+    border: 10px solid red;
+    &:focus{
+      border-color: blue;
+    }
+  }
+}

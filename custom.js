@@ -153,11 +153,42 @@ _gaq.push(["_trackPageview"]);
 })();
 
 // ============[naccube]==============
-window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  }, false);
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);
 
 $(function () {
+  $(".exShow-item-1").show();
+  $(".exShow-item-2").hide();
+  $(".exShow-item-3").hide();
+  $(".exShow-item-4").hide();
+  $(".exBtn-1").addClass("exSelected");
+  $(".exBtn-2").removeClass("exSelected");
+  $(".exBtn-3").removeClass("exSelected");
+  $(".exBtn-4").removeClass("exSelected");
+
+  $(".groupBox1").show();
+  $(".groupBox2").hide();
+  $(".groupBox3").hide();
+  $(".group1").addClass("exSelected");
+  $(".group2").removeClass("exSelected");
+  $(".group3").removeClass("exSelected");
+
+  $(".groupNext1").hide();
+  $(".groupNext2").hide();
+  $(".groupNext3").hide();
+  $(".groupPrev1").show();
+  $(".groupPrev2").hide();
+  $(".groupPrev3").hide();
+
+  $(".exBtn-1").click(function () {
     $(".exShow-item-1").show();
     $(".exShow-item-2").hide();
     $(".exShow-item-3").hide();
@@ -166,172 +197,166 @@ $(function () {
     $(".exBtn-2").removeClass("exSelected");
     $(".exBtn-3").removeClass("exSelected");
     $(".exBtn-4").removeClass("exSelected");
-
+  });
+  $(".exBtn-2").click(function () {
+    $(".exShow-item-1").hide();
+    $(".exShow-item-2").show();
+    $(".exShow-item-3").hide();
+    $(".exShow-item-4").hide();
+    $(".exBtn-1").removeClass("exSelected");
+    $(".exBtn-2").addClass("exSelected");
+    $(".exBtn-3").removeClass("exSelected");
+    $(".exBtn-4").removeClass("exSelected");
+  });
+  $(".exBtn-3").click(function () {
+    $(".exShow-item-1").hide();
+    $(".exShow-item-2").hide();
+    $(".exShow-item-3").show();
+    $(".exShow-item-4").hide();
+    $(".exBtn-1").removeClass("exSelected");
+    $(".exBtn-2").removeClass("exSelected");
+    $(".exBtn-3").addClass("exSelected");
+    $(".exBtn-4").removeClass("exSelected");
+  });
+  $(".exBtn-4").click(function () {
+    $(".exShow-item-1").hide();
+    $(".exShow-item-2").hide();
+    $(".exShow-item-3").hide();
+    $(".exShow-item-4").show();
+    $(".exBtn-1").removeClass("exSelected");
+    $(".exBtn-2").removeClass("exSelected");
+    $(".exBtn-3").removeClass("exSelected");
+    $(".exBtn-4").addClass("exSelected");
+  });
+  $(".group1").click(function () {
     $(".groupBox1").show();
     $(".groupBox2").hide();
     $(".groupBox3").hide();
     $(".group1").addClass("exSelected");
     $(".group2").removeClass("exSelected");
     $(".group3").removeClass("exSelected");
-
     $(".groupNext1").hide();
     $(".groupNext2").hide();
     $(".groupNext3").hide();
     $(".groupPrev1").show();
     $(".groupPrev2").hide();
     $(".groupPrev3").hide();
+  });
+  $(".group2").click(function () {
+    $(".groupBox1").hide();
+    $(".groupBox2").show();
+    $(".groupBox3").hide();
+    $(".group1").removeClass("exSelected");
+    $(".group2").addClass("exSelected");
+    $(".group3").removeClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").show();
+    $(".groupNext3").hide();
+    $(".groupPrev1").hide();
+    $(".groupPrev2").show();
+    $(".groupPrev3").hide();
+  });
+  $(".group3").click(function () {
+    $(".groupBox1").hide();
+    $(".groupBox2").hide();
+    $(".groupBox3").show();
+    $(".group1").removeClass("exSelected");
+    $(".group2").removeClass("exSelected");
+    $(".group3").addClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").hide();
+    $(".groupNext3").show();
+    $(".groupPrev1").hide();
+    $(".groupPrev2").hide();
+    $(".groupPrev3").hide();
+  });
 
-    $(".exBtn-1").click(function () {
-        $(".exShow-item-1").show();
-        $(".exShow-item-2").hide();
-        $(".exShow-item-3").hide();
-        $(".exShow-item-4").hide();
-        $(".exBtn-1").addClass("exSelected");
-        $(".exBtn-2").removeClass("exSelected");
-        $(".exBtn-3").removeClass("exSelected");
-        $(".exBtn-4").removeClass("exSelected");
-    });
-    $(".exBtn-2").click(function () {
-        $(".exShow-item-1").hide();
-        $(".exShow-item-2").show();
-        $(".exShow-item-3").hide();
-        $(".exShow-item-4").hide();
-        $(".exBtn-1").removeClass("exSelected");
-        $(".exBtn-2").addClass("exSelected");
-        $(".exBtn-3").removeClass("exSelected");
-        $(".exBtn-4").removeClass("exSelected");
-    });
-    $(".exBtn-3").click(function () {
-        $(".exShow-item-1").hide();
-        $(".exShow-item-2").hide();
-        $(".exShow-item-3").show();
-        $(".exShow-item-4").hide();
-        $(".exBtn-1").removeClass("exSelected");
-        $(".exBtn-2").removeClass("exSelected");
-        $(".exBtn-3").addClass("exSelected");
-        $(".exBtn-4").removeClass("exSelected");
-    });
-    $(".exBtn-4").click(function () {
-        $(".exShow-item-1").hide();
-        $(".exShow-item-2").hide();
-        $(".exShow-item-3").hide();
-        $(".exShow-item-4").show();
-        $(".exBtn-1").removeClass("exSelected");
-        $(".exBtn-2").removeClass("exSelected");
-        $(".exBtn-3").removeClass("exSelected");
-        $(".exBtn-4").addClass("exSelected");
-    });
-    $(".group1").click(function () {
-        $(".groupBox1").show();
-        $(".groupBox2").hide();
-        $(".groupBox3").hide();
-        $(".group1").addClass("exSelected");
-        $(".group2").removeClass("exSelected");
-        $(".group3").removeClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").hide();
-        $(".groupNext3").hide();
-        $(".groupPrev1").show();
-        $(".groupPrev2").hide();
-        $(".groupPrev3").hide();
-    });
-    $(".group2").click(function () {
-        $(".groupBox1").hide();
-        $(".groupBox2").show();
-        $(".groupBox3").hide();
-        $(".group1").removeClass("exSelected");
-        $(".group2").addClass("exSelected");
-        $(".group3").removeClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").show();
-        $(".groupNext3").hide();
-        $(".groupPrev1").hide();
-        $(".groupPrev2").show();
-        $(".groupPrev3").hide();
-    });
-    $(".group3").click(function () {
-        $(".groupBox1").hide();
-        $(".groupBox2").hide();
-        $(".groupBox3").show();
-        $(".group1").removeClass("exSelected");
-        $(".group2").removeClass("exSelected");
-        $(".group3").addClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").hide();
-        $(".groupNext3").show();
-        $(".groupPrev1").hide();
-        $(".groupPrev2").hide();
-        $(".groupPrev3").hide();
-    });
-
-    $(".groupPrev1").click(function () {
-        $(".groupBox1").hide();
-        $(".groupBox2").show();
-        $(".groupBox3").hide();
-        $(".group1").removeClass("exSelected");
-        $(".group2").addClass("exSelected");
-        $(".group3").removeClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").show();
-        $(".groupNext3").hide();
-        $(".groupPrev1").hide();
-        $(".groupPrev2").show();
-        $(".groupPrev3").hide();
-    });
-    $(".groupNext2").click(function () {
-        $(".groupBox1").show();
-        $(".groupBox2").hide();
-        $(".groupBox3").hide();
-        $(".group1").addClass("exSelected");
-        $(".group2").removeClass("exSelected");
-        $(".group3").removeClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").hide();
-        $(".groupNext3").hide();
-        $(".groupPrev1").show();
-        $(".groupPrev2").hide();
-        $(".groupPrev3").hide();
-    });
-    $(".groupPrev2").click(function () {
-        $(".groupBox1").hide();
-        $(".groupBox2").hide();
-        $(".groupBox3").show();
-        $(".group1").removeClass("exSelected");
-        $(".group2").removeClass("exSelected");
-        $(".group3").addClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").hide();
-        $(".groupNext3").show();
-        $(".groupPrev1").hide();
-        $(".groupPrev2").hide();
-        $(".groupPrev3").hide();
-    });
-    $(".groupNext3").click(function () {
-        $(".groupBox1").hide();
-        $(".groupBox2").show();
-        $(".groupBox3").hide();
-        $(".group1").removeClass("exSelected");
-        $(".group2").addClass("exSelected");
-        $(".group3").removeClass("exSelected");
-        $(".groupNext1").hide();
-        $(".groupNext2").show();
-        $(".groupNext3").hide();
-        $(".groupPrev1").hide();
-        $(".groupPrev2").show();
-        $(".groupPrev3").hide();
-    });
+  $(".groupPrev1").click(function () {
+    $(".groupBox1").hide();
+    $(".groupBox2").show();
+    $(".groupBox3").hide();
+    $(".group1").removeClass("exSelected");
+    $(".group2").addClass("exSelected");
+    $(".group3").removeClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").show();
+    $(".groupNext3").hide();
+    $(".groupPrev1").hide();
+    $(".groupPrev2").show();
+    $(".groupPrev3").hide();
+  });
+  $(".groupNext2").click(function () {
+    $(".groupBox1").show();
+    $(".groupBox2").hide();
+    $(".groupBox3").hide();
+    $(".group1").addClass("exSelected");
+    $(".group2").removeClass("exSelected");
+    $(".group3").removeClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").hide();
+    $(".groupNext3").hide();
+    $(".groupPrev1").show();
+    $(".groupPrev2").hide();
+    $(".groupPrev3").hide();
+  });
+  $(".groupPrev2").click(function () {
+    $(".groupBox1").hide();
+    $(".groupBox2").hide();
+    $(".groupBox3").show();
+    $(".group1").removeClass("exSelected");
+    $(".group2").removeClass("exSelected");
+    $(".group3").addClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").hide();
+    $(".groupNext3").show();
+    $(".groupPrev1").hide();
+    $(".groupPrev2").hide();
+    $(".groupPrev3").hide();
+  });
+  $(".groupNext3").click(function () {
+    $(".groupBox1").hide();
+    $(".groupBox2").show();
+    $(".groupBox3").hide();
+    $(".group1").removeClass("exSelected");
+    $(".group2").addClass("exSelected");
+    $(".group3").removeClass("exSelected");
+    $(".groupNext1").hide();
+    $(".groupNext2").show();
+    $(".groupNext3").hide();
+    $(".groupPrev1").hide();
+    $(".groupPrev2").show();
+    $(".groupPrev3").hide();
+  });
 });
 
 // ============[experience]==============
-function exLoad(url,id) {
+function exLoad(url, id) {
   var xhttp = new XMLHttpRequest();
+  var exArena = document.getElementById("exArena");
 
   xhttp.onreadystatechange = function () {
-    $("#exArena").innerHTML = this.responseText;
+    if (exArena) {
+      exArena.innerHTML = this.responseText;
+    }
   };
 
   xhttp.open("GET", url, true);
   xhttp.send();
 
-  $(id).addClass('exBtn-Active');
+  let exButtons = ["exBtn-1", "exBtn-2", "exBtn-3"];
+
+  for (let i = 0; i < exButtons.length; i++) {
+    let button = document.querySelector("#" + exButtons[i]);
+    button.addEventListener("click", function() {
+      for (let j = 0; j < exButtons.length; j++) {
+        let otherButton = document.querySelector("#" + exButtons[j]);
+        if (i === j) {
+          button.classList.add("exBtn-Active");
+        } else {
+          otherButton.classList.remove("exBtn-Active");
+        }
+      }
+    });
+  }
+
 }
