@@ -54,10 +54,10 @@
     <!-- -----------------[skill]-------------------- -->
     <section class="p-5">
         <div class="row container skill">
-            <div class="col-sm-1">
+            <div class="col-sm-2">
                 <h3 id="skill">#skills</h3>
             </div>
-            <div class="col-sm-11">
+            <div class="col-sm-10">
                 <div class="row">
                     <div class="col-3">
                         <h2>HTML5,CSS3</h2>
@@ -66,12 +66,16 @@
                         <div id="sass"></div>
                         <h2>Bootstrap</h2>
                         <div id="bootstrap"></div>
+                        <h2>Tailwind</h2>
+                        <div id="tailwind"></div>
                     </div>
                     <div class="col-3">
                         <h2>JavaScript</h2>
                         <div id="javascript"></div>
                         <h2>JQuery</h2>
                         <div id="jquery"></div>
+                        <h2>AJAX</h2>
+                        <div id="ajax"></div>
                         <h2>React.JS</h2>
                         <div id="reactjs"></div>
                     </div>
@@ -82,6 +86,8 @@
                         <div id="django"></div>
                         <h2>mySQL</h2>
                         <div id="mysql"></div>
+                        <h2>MariaDB</h2>
+                        <div id="maridb"></div>
                     </div>
                 </div>
             </div>
@@ -91,45 +97,24 @@
     <!-- -----------------[skill]-------------------- -->
     <!-- ---------------[experience]----------------- -->
     <section class="p-5">
-        <div class="row container skill">
-            <div class="col-sm-1">
+        <div class="row container experience">
+            <div class="col-sm-2">
                 <h3 id="experience">#experience</h3>
             </div>
-            <div class="col-sm-11 row">
+            <div class="col-sm-10 row">
                 <div class="col-1">
-                    <ul class="exBtns">
-                        <li class="exBtn-item exBtn-1">
-                            <h6>CO-CEO of SPHYNX Games</h6>
-                        </li>
-                        <li class="exBtn-item exBtn-2">
-                            <h6>Founder of Empire</h6>
-                        </li>
-                        <li class="exBtn-item exBtn-3">
-                            <h6>Work for Oracle</h6>
-                        </li>
+                    <ul>
+                    <li class="btn btn-light" id="exBtn-1" onclick="exLoad('pages/sphynx.txt','exBtn-1')">CEO of SPHYNX Gmaes</li>
+                    <li class="btn btn-light" id="exBtn-2" onclick="exLoad('pages/empire.txt','exBtn-2')">Founder of Empire</li>
+                    <li class="btn btn-light" id="exBtn-3" onclick="exLoad('pages/oracle.txt','exBtn-3')">Work with Oracle</li>
                     </ul>
                 </div>
                 <div class="col-11">
-                    <div class="exShow">
-                        <div class="exShow-item exShow-item-1">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 111adipisicing elit. Tempore praesentium, maxime asperiores explicabo aliquid ea debitis minima totam est
-                            </p>
-                        </div>
-                        <div class="exShow-item exShow-item-2">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur000 adipisicing elit. Tempore praesentium, maxime asperiores explicabo aliquid ea debitis minima totam est
-                            </p>
-                        </div>
-                        <div class="exShow-item exShow-item-3">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur 878789adipisicing elit. Tempore praesentium, maxime asperiores explicabo aliquid ea debitis minima totam est
-                            </p>
-                        </div>
-                    </div>
+                    <article>
+                        <p id="exArena text-light"></p>
+                    </article>
                 </div>
             </div>
-            <div class="middleland p-4"></div>
         </div>
     </section>
     <!-- ---------------[experience]----------------- -->

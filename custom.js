@@ -109,10 +109,16 @@ $("#sass").LineProgressbar({
 $("#bootstrap").LineProgressbar({
   percentage: 100,
 });
+$("#tailwind").LineProgressbar({
+  percentage: 1,
+});
 $("#javascript").LineProgressbar({
   percentage: 90,
 });
 $("#jquery").LineProgressbar({
+  percentage: 50,
+});
+$("#ajax").LineProgressbar({
   percentage: 50,
 });
 $("#reactjs").LineProgressbar({
@@ -125,6 +131,9 @@ $("#django").LineProgressbar({
   percentage: 20,
 });
 $("#mysql").LineProgressbar({
+  percentage: 1,
+});
+$("#maridb").LineProgressbar({
   percentage: 1,
 });
 var _gaq = _gaq || [];
@@ -148,23 +157,22 @@ window.addEventListener('scroll', () => {
     document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
   }, false);
 
-  // ============[experience]==============
-  $(function () {
+$(function () {
     $(".exShow-item-1").show();
     $(".exShow-item-2").hide();
     $(".exShow-item-3").hide();
     $(".exShow-item-4").hide();
-    $(".exBtn-1").addClass("active");
-    $(".exBtn-2").removeClass("active");
-    $(".exBtn-3").removeClass("active");
-    $(".exBtn-4").removeClass("active");
+    $(".exBtn-1").addClass("exSelected");
+    $(".exBtn-2").removeClass("exSelected");
+    $(".exBtn-3").removeClass("exSelected");
+    $(".exBtn-4").removeClass("exSelected");
 
     $(".groupBox1").show();
     $(".groupBox2").hide();
     $(".groupBox3").hide();
-    $(".group1").addClass("active");
-    $(".group2").removeClass("active");
-    $(".group3").removeClass("active");
+    $(".group1").addClass("exSelected");
+    $(".group2").removeClass("exSelected");
+    $(".group3").removeClass("exSelected");
 
     $(".groupNext1").hide();
     $(".groupNext2").hide();
@@ -178,48 +186,48 @@ window.addEventListener('scroll', () => {
         $(".exShow-item-2").hide();
         $(".exShow-item-3").hide();
         $(".exShow-item-4").hide();
-        $(".exBtn-1").addClass("active");
-        $(".exBtn-2").removeClass("active");
-        $(".exBtn-3").removeClass("active");
-        $(".exBtn-4").removeClass("active");
+        $(".exBtn-1").addClass("exSelected");
+        $(".exBtn-2").removeClass("exSelected");
+        $(".exBtn-3").removeClass("exSelected");
+        $(".exBtn-4").removeClass("exSelected");
     });
     $(".exBtn-2").click(function () {
         $(".exShow-item-1").hide();
         $(".exShow-item-2").show();
         $(".exShow-item-3").hide();
         $(".exShow-item-4").hide();
-        $(".exBtn-1").removeClass("active");
-        $(".exBtn-2").addClass("active");
-        $(".exBtn-3").removeClass("active");
-        $(".exBtn-4").removeClass("active");
+        $(".exBtn-1").removeClass("exSelected");
+        $(".exBtn-2").addClass("exSelected");
+        $(".exBtn-3").removeClass("exSelected");
+        $(".exBtn-4").removeClass("exSelected");
     });
     $(".exBtn-3").click(function () {
         $(".exShow-item-1").hide();
         $(".exShow-item-2").hide();
         $(".exShow-item-3").show();
         $(".exShow-item-4").hide();
-        $(".exBtn-1").removeClass("active");
-        $(".exBtn-2").removeClass("active");
-        $(".exBtn-3").addClass("active");
-        $(".exBtn-4").removeClass("active");
+        $(".exBtn-1").removeClass("exSelected");
+        $(".exBtn-2").removeClass("exSelected");
+        $(".exBtn-3").addClass("exSelected");
+        $(".exBtn-4").removeClass("exSelected");
     });
     $(".exBtn-4").click(function () {
         $(".exShow-item-1").hide();
         $(".exShow-item-2").hide();
         $(".exShow-item-3").hide();
         $(".exShow-item-4").show();
-        $(".exBtn-1").removeClass("active");
-        $(".exBtn-2").removeClass("active");
-        $(".exBtn-3").removeClass("active");
-        $(".exBtn-4").addClass("active");
+        $(".exBtn-1").removeClass("exSelected");
+        $(".exBtn-2").removeClass("exSelected");
+        $(".exBtn-3").removeClass("exSelected");
+        $(".exBtn-4").addClass("exSelected");
     });
     $(".group1").click(function () {
         $(".groupBox1").show();
         $(".groupBox2").hide();
         $(".groupBox3").hide();
-        $(".group1").addClass("active");
-        $(".group2").removeClass("active");
-        $(".group3").removeClass("active");
+        $(".group1").addClass("exSelected");
+        $(".group2").removeClass("exSelected");
+        $(".group3").removeClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").hide();
         $(".groupNext3").hide();
@@ -231,9 +239,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").hide();
         $(".groupBox2").show();
         $(".groupBox3").hide();
-        $(".group1").removeClass("active");
-        $(".group2").addClass("active");
-        $(".group3").removeClass("active");
+        $(".group1").removeClass("exSelected");
+        $(".group2").addClass("exSelected");
+        $(".group3").removeClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").show();
         $(".groupNext3").hide();
@@ -245,9 +253,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").hide();
         $(".groupBox2").hide();
         $(".groupBox3").show();
-        $(".group1").removeClass("active");
-        $(".group2").removeClass("active");
-        $(".group3").addClass("active");
+        $(".group1").removeClass("exSelected");
+        $(".group2").removeClass("exSelected");
+        $(".group3").addClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").hide();
         $(".groupNext3").show();
@@ -260,9 +268,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").hide();
         $(".groupBox2").show();
         $(".groupBox3").hide();
-        $(".group1").removeClass("active");
-        $(".group2").addClass("active");
-        $(".group3").removeClass("active");
+        $(".group1").removeClass("exSelected");
+        $(".group2").addClass("exSelected");
+        $(".group3").removeClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").show();
         $(".groupNext3").hide();
@@ -274,9 +282,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").show();
         $(".groupBox2").hide();
         $(".groupBox3").hide();
-        $(".group1").addClass("active");
-        $(".group2").removeClass("active");
-        $(".group3").removeClass("active");
+        $(".group1").addClass("exSelected");
+        $(".group2").removeClass("exSelected");
+        $(".group3").removeClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").hide();
         $(".groupNext3").hide();
@@ -288,9 +296,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").hide();
         $(".groupBox2").hide();
         $(".groupBox3").show();
-        $(".group1").removeClass("active");
-        $(".group2").removeClass("active");
-        $(".group3").addClass("active");
+        $(".group1").removeClass("exSelected");
+        $(".group2").removeClass("exSelected");
+        $(".group3").addClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").hide();
         $(".groupNext3").show();
@@ -302,9 +310,9 @@ window.addEventListener('scroll', () => {
         $(".groupBox1").hide();
         $(".groupBox2").show();
         $(".groupBox3").hide();
-        $(".group1").removeClass("active");
-        $(".group2").addClass("active");
-        $(".group3").removeClass("active");
+        $(".group1").removeClass("exSelected");
+        $(".group2").addClass("exSelected");
+        $(".group3").removeClass("exSelected");
         $(".groupNext1").hide();
         $(".groupNext2").show();
         $(".groupNext3").hide();
@@ -313,3 +321,17 @@ window.addEventListener('scroll', () => {
         $(".groupPrev3").hide();
     });
 });
+
+// ============[experience]==============
+function exLoad(url,id) {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function () {
+    $("#exArena").innerHTML = this.responseText;
+  };
+
+  xhttp.open("GET", url, true);
+  xhttp.send();
+
+  $(id).addClass('exBtn-Active');
+}
