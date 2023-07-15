@@ -1,6 +1,11 @@
 .middleland {
   width: 50%;
-  border-top: 3px dashed $colorAlpha;
+  border-bottom: 3px dashed $colorAlpha;
+}
+.section-title {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
 }
 /*-----[type]-----*/
 .typing-anima {
@@ -22,12 +27,12 @@
 }
 /*-----[navigator]-----*/
 .cube-wrap {
-      --size: 10vmin;
-      position: fixed;
-      bottom: 14%;
-      right: 6%;
-      perspective: 100vmin;
-      z-index: 1000;
+  --size: 10vmin;
+  position: fixed;
+  bottom: 14%;
+  right: 6%;
+  perspective: 100vmin;
+  z-index: 1000;
 }
 .cube {
   transform-style: preserve-3d;
@@ -39,15 +44,14 @@
     transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
   }
 }
-
 .side {
   position: absolute;
   width: var(--size);
   height: var(--size);
   background-color: $colorAlpha;
   backface-visibility: visible;
-  top: calc(var(--size) * -.5);
-  left: calc(var(--size) * -.5);
+  top: calc(var(--size) * -0.5);
+  left: calc(var(--size) * -0.5);
   border: 5px solid $colorDark;
   @include flex-centralizer;
   a {
@@ -59,27 +63,27 @@
 }
 .top {
   background-color: $colorAlpha;
-  transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
 }
 .bottom {
   background-color: $colorAlpha;
-  transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
 }
 .left {
   background-color: $colorAlpha;
-  transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
 }
 .right {
   background-color: $colorAlpha;
-  transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+  transform: rotateY(90deg) translateZ(calc(var(--size) * -0.5));
 }
 .front {
   background-color: $colorAlpha;
-  transform: translateZ(calc(var(--size) * .5));
+  transform: translateZ(calc(var(--size) * 0.5));
 }
 .back {
   background-color: $colorAlpha;
-  transform: translateZ(calc(var(--size) * -.5));
+  transform: translateZ(calc(var(--size) * -0.5));
 }
 :root .cube-wrap * {
   /* Pause the animation */
@@ -124,12 +128,7 @@ header {
 /*-------[skill]-------*/
 .skill {
   @include flex-centralizer;
-  height: 70vh;
-}
-#skill {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+  height: 60vh;
 }
 .progressbar {
   width: 100%;
@@ -145,14 +144,44 @@ header {
   background-color: #3498db;
 }
 /*-----[experience]-----*/
-#experience {
-  @extend #skill
+.experience {
+  @include flex-centralizer;
+  &-area {
+    height: 70%;
+    border: 2px solid $colorAlpha;
+  }
 }
-.exBtn {
-  &-Active{
-    border: 10px solid red;
-    &:focus{
-      border-color: blue;
+.exList {
+  &-ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
     }
   }
+}
+.exBtn {
+  &:focus{
+    letter-spacing: 50px;
+  }
+  &-Active {
+    color: $colorDark;
+    background-color: $colorAlpha;
+    transition: 0.5s all;
+  }
+}
+#exArena {
+  height: 100%;
+  border-left: 2px solid $colorAlpha;
+  padding: 20px;
+  text-align: justify;
+}
+/*-----[services]-----*/
+.services {
+  @include flex-centralizer
 }

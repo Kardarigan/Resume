@@ -35,9 +35,37 @@ h5 {
   font-size: 2vw;
 }
 
+/*classes*/
+.card {
+  background-color: transparent;
+  border: 2px solid azure;
+  border-radius: 0;
+  height: 40vh;
+  position: relative;
+}
+.card-title {
+  color: azure;
+}
+.card-text {
+  text-align: justify;
+}
+.card a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 3px solid azure;
+}
+
 .middleland {
   width: 50%;
-  border-top: 3px dashed azure;
+  border-bottom: 3px dashed azure;
+}
+
+.section-title {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
 }
 
 /*-----[type]-----*/
@@ -177,13 +205,7 @@ header button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-}
-
-#skill, #experience {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+  height: 60vh;
 }
 
 .progressbar {
@@ -202,9 +224,48 @@ header button {
 }
 
 /*-----[experience]-----*/
-.exBtn-Active {
-  border: 10px solid red;
+.experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.exBtn-Active:focus {
-  border-color: blue;
+.experience-area {
+  height: 70%;
+  border: 2px solid azure;
+}
+
+.exList-ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.exList-ul li {
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.exBtn:focus {
+  letter-spacing: 50px;
+}
+.exBtn-Active {
+  color: rgb(4, 7, 9);
+  background-color: azure;
+  transition: 0.5s all;
+}
+
+#exArena {
+  height: 100%;
+  border-left: 2px solid azure;
+  padding: 20px;
+  text-align: justify;
+}
+
+/*-----[services]-----*/
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

@@ -343,20 +343,19 @@ function exLoad(url, id) {
   xhttp.open("GET", url, true);
   xhttp.send();
 
-  let exButtons = ["exBtn-1", "exBtn-2", "exBtn-3"];
+  let exList = document.querySelector(".exList-ul");
 
-  for (let i = 0; i < exButtons.length; i++) {
-    let button = document.querySelector("#" + exButtons[i]);
-    button.addEventListener("click", function() {
-      for (let j = 0; j < exButtons.length; j++) {
-        let otherButton = document.querySelector("#" + exButtons[j]);
-        if (i === j) {
-          button.classList.add("exBtn-Active");
+  exList.addEventListener("click", function (e) {
+    let target = e.target;
+    if (target.classList.contains("exBtn")) {
+      let exButtons = document.querySelectorAll(".exBtn");
+      for (let i = 0; i < exButtons.length; i++) {
+        if (exButtons[i] === target) {
+          exButtons[i].classList.add("exBtn-Active");
         } else {
-          otherButton.classList.remove("exBtn-Active");
+          exButtons[i].classList.remove("exBtn-Active");
         }
       }
-    });
-  }
-
+    }
+  });
 }

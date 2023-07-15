@@ -27,3 +27,24 @@ h3 {
 h5 {
     font-size: 2vw;
 }
+/*classes*/
+.card{
+    background-color: transparent;
+    border: 2px solid $colorAlpha;
+    border-radius: 0;
+    height: 40vh;
+    position: relative;
+    &-title {
+        color: $colorAlpha;
+    }
+    &-text {
+        text-align: justify;
+    }
+    a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 3px solid $colorAlpha;
+    }
+}
