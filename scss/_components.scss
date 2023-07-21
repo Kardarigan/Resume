@@ -27,70 +27,70 @@
 }
 /*-----[navigator]-----*/
 .cube-wrap {
-  --size: 10vmin;
   position: fixed;
-  bottom: 14%;
-  right: 6%;
-  perspective: 100vmin;
+  bottom: 10vh;
+  right: 10vh;
+  perspective: 100vh;
   z-index: 1000;
 }
+
 .cube {
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
-  animation: cube 1s linear;
+  animation: cube 1s linear infinite;
+  transform-origin: 50% 50%;
 }
+
 @keyframes cube {
   to {
     transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
   }
 }
+
 .side {
   position: absolute;
-  width: var(--size);
-  height: var(--size);
+  width: 10vh;
+  height: 10vh;
   background-color: $colorAlpha;
   backface-visibility: visible;
-  top: calc(var(--size) * -0.5);
-  left: calc(var(--size) * -0.5);
-  border: 5px solid $colorDark;
-  @include flex-centralizer;
+  top: -5vh;
+  left: -5vh;
+  @include border-minimal(1vh,$colorDark);
+
   a {
+    @include flex-centralizer;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
     i {
       color: $colorDark;
-      font-size: 2vw;
+      font-size: 1.5em;
     }
   }
 }
+
 .top {
-  background-color: $colorAlpha;
-  transform: rotateX(90deg) translateZ(calc(var(--size) * 0.5));
+  transform: rotateX(90deg) translateZ(4.9vh);
 }
 .bottom {
-  background-color: $colorAlpha;
-  transform: rotateX(90deg) translateZ(calc(var(--size) * -0.5));
+  transform: rotateX(90deg) translateZ(-4.9vh);
 }
 .left {
-  background-color: $colorAlpha;
-  transform: rotateY(90deg) translateZ(calc(var(--size) * 0.5));
+  transform: rotateY(90deg) translateZ(4.9vh);
 }
 .right {
-  background-color: $colorAlpha;
-  transform: rotateY(90deg) translateZ(calc(var(--size) * -0.5));
+  transform: rotateY(90deg) translateZ(-4.9vh);
 }
 .front {
-  background-color: $colorAlpha;
-  transform: translateZ(calc(var(--size) * 0.5));
+  transform: translateZ(4.9vh);
 }
 .back {
-  background-color: $colorAlpha;
-  transform: translateZ(calc(var(--size) * -0.5));
+  transform: translateZ(-4.9vh);
 }
+
 :root .cube-wrap * {
-  /* Pause the animation */
   animation-play-state: paused;
-  /* Bind the animation to scroll */
   animation-delay: calc(var(--scroll) * -1s);
-  /* These last 2 properites clean up overshoot weirdness */
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
@@ -99,7 +99,6 @@
   color: $colorBeta !important;
   font-weight: bold;
 }
-
 header {
   height: 100vh;
 
@@ -111,7 +110,7 @@ header {
 .whos {
   @include flex-centralizer;
   &-left {
-    border: 2px solid $colorAlpha;
+    @include border-minimal;
     padding-right: 20% !important;
   }
   &-right {
@@ -166,7 +165,7 @@ header {
   }
 }
 .exBtn {
-  &:focus{
+  &:focus {
     letter-spacing: 50px;
   }
   &-Active {
@@ -183,5 +182,16 @@ header {
 }
 /*-----[services]-----*/
 .services {
-  @include flex-centralizer
+  @include flex-centralizer;
+}
+/* ...........................................media-query............................................... */
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 479px) {
+}
+@media (max-width: 319px) {
 }

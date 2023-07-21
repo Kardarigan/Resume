@@ -1,7 +1,7 @@
 // ---------[vars]---------
 $colorAlpha: azure;
 $colorAlpha-darker: rgba(240, 255, 255, 0.551);
-$colorBeta: red;
+$colorBeta: rgb(214, 1, 1);
 $colorDark: rgb(4, 7, 9);
 // ---------[mixin]---------
 @mixin flex-centralizer {
@@ -29,4 +29,7 @@ $colorDark: rgb(4, 7, 9);
 }
 @mixin borderSide($color: $colorAlpha) {
   border-left: 3px solid $color;
+}
+@mixin border-minimal($size: 2px,$color: $colorAlpha) {
+  border: $size solid $color;
 }
