@@ -46,7 +46,7 @@
     <!-- ----------------[navigator]----------------- -->
     <!-- -----------------[header]------------------- -->
     <header class="py-4 ms-sm-5 row align-items-center">
-      <div class="col-md-5 container d-block p-5">
+      <div class="col-md-5 container mainSection d-block p-5">
         <h1 class="typing-anima">
           Hello there, its <span id="qmars">Qmars</span>
         </h1>
@@ -70,7 +70,7 @@
     <!-- -----------------[header]------------------- -->
     <!-- ---------------[whos qmars]----------------- -->
     <section class="py-4 ms-sm-5 row" id="whos">
-      <div class="container row align-items-center">
+      <div class="container mainSection row align-items-center">
         <div class="whos-left col-lg-10 p-5 pe-0">
           <h3>#who is Qmars?</h3>
           <p class="lead text-muted mb-4">
@@ -97,41 +97,41 @@
     <!-- ---------------[whos qmars]----------------- -->
     <!-- -----------------[skill]-------------------- -->
     <section class="p-5">
-      <div class="row container skill">
+      <div class="row container mainSection skill">
         <div class="col-sm-2">
-          <h3 class="section-title">#skills</h3>
+          <h3 id="skills" class="section-title">#skills</h3>
         </div>
         <div class="col-sm-10">
-          <div class="row">
-            <div class="col-3">
+          <div  id="skillsRow" class="row">
+            <div class="col-3 me-lg-5 m-sm-3">
               <h2>HTML5,CSS3</h2>
-              <div id="htmlcss"></div>
+              <div id="htmlcss" class="skill-bars"></div>
               <h2>SASS</h2>
-              <div id="sass"></div>
+              <div id="sass" class="skill-bars"></div>
               <h2>Bootstrap</h2>
-              <div id="bootstrap"></div>
+              <div id="bootstrap" class="skill-bars"></div>
               <h2>Tailwind</h2>
-              <div id="tailwind"></div>
+              <div id="tailwind" class="skill-bars"></div>
             </div>
-            <div class="col-3">
+            <div class="col-3 me-lg-5 m-sm-3">
               <h2>JavaScript</h2>
-              <div id="javascript"></div>
+              <div id="javascript" class="skill-bars"></div>
               <h2>JQuery</h2>
-              <div id="jquery"></div>
+              <div id="jquery" class="skill-bars"></div>
               <h2>AJAX</h2>
-              <div id="ajax"></div>
+              <div id="ajax" class="skill-bars"></div>
               <h2>React.JS</h2>
-              <div id="reactjs"></div>
+              <div id="reactjs" class="skill-bars"></div>
             </div>
-            <div class="col-3">
+            <div class="col-3 m-sm-3">
               <h2>Python</h2>
-              <div id="python"></div>
+              <div id="python" class="skill-bars"></div>
               <h2>Django</h2>
-              <div id="django"></div>
+              <div id="django" class="skill-bars"></div>
               <h2>mySQL</h2>
-              <div id="mysql"></div>
+              <div id="mysql" class="skill-bars"></div>
               <h2>MariaDB</h2>
-              <div id="maridb"></div>
+              <div id="maridb" class="skill-bars"></div>
             </div>
           </div>
         </div>
@@ -141,9 +141,9 @@
     <!-- -----------------[skill]-------------------- -->
     <!-- ---------------[experience]----------------- -->
     <section class="p-5">
-      <div class="row container experience">
-        <div class="col-sm-2">
-          <h3 class="section-title">#experience</h3>
+      <div class="row container mainSection experience">
+        <div class="col-md-2">
+          <h3 id="experience" class="section-title">#experience</h3>
         </div>
         <div class="col-sm-10 row experience-area p-0">
           <div class="col-2 exList px-0">
@@ -173,7 +173,7 @@
           </div>
           <div class="col-10 p-0">
             <article>
-              <p id="exArena">
+              <p id="exArena" class="lead text-muted">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
                 eius ad cupiditate quisquam eligendi nemo pariatur culpa officia
                 illo nobis voluptate placeat tempore harum, fugit repellendus
@@ -188,12 +188,12 @@
     <!-- -----------------[experience]------------------- -->
     <!-- -----------------[services]------------------- -->
     <section class="p-5">
-      <div class="row container services">
-        <div class="col-sm-2">
-          <h3 class="section-title">#myServices</h3>
+      <div class="row container mainSection services">
+        <div class="col-md-2">
+          <h3 id="myservices" class="section-title">#myServices</h3>
         </div>
         <div class="col-sm-10 row p-0 gx-2">
-          <div class="card mx-sm-4 mx-0 my-3 col-md-5">
+          <div class="card mx-md-3 mx-0 my-3 col-md-5">
             <div class="card-body">
               <h5 class="card-title">#InternShip</h5>
               <p class="card-text mt-3">

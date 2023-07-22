@@ -7,6 +7,9 @@
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
 }
+.mainSection {
+  cursor: auto;
+}
 /*-----[type]-----*/
 .typing-anima {
   width: 8.5em;
@@ -33,20 +36,17 @@
   perspective: 100vh;
   z-index: 1000;
 }
-
 .cube {
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
   animation: cube 1s linear infinite;
   transform-origin: 50% 50%;
 }
-
 @keyframes cube {
   to {
     transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
   }
 }
-
 .side {
   position: absolute;
   width: 10vh;
@@ -55,7 +55,7 @@
   backface-visibility: visible;
   top: -5vh;
   left: -5vh;
-  @include border-minimal(1vh,$colorDark);
+  @include border-minimal(1vh, $colorDark);
 
   a {
     @include flex-centralizer;
@@ -68,7 +68,6 @@
     }
   }
 }
-
 .top {
   transform: rotateX(90deg) translateZ(4.9vh);
 }
@@ -87,7 +86,6 @@
 .back {
   transform: translateZ(-4.9vh);
 }
-
 :root .cube-wrap * {
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -125,6 +123,9 @@ header {
   }
 }
 /*-------[skill]-------*/
+#skills {
+  margin: 10px !important;
+}
 .skill {
   @include flex-centralizer;
   height: 60vh;
@@ -143,14 +144,18 @@ header {
   background-color: #3498db;
 }
 /*-----[experience]-----*/
+#experience {
+  margin: -13px !important;
+}
 .experience {
   @include flex-centralizer;
   &-area {
     height: 70%;
-    border: 2px solid $colorAlpha;
+    @include border-minimal;
   }
 }
 .exList {
+  border-right: 2px solid $colorAlpha;
   &-ul {
     height: 100%;
     display: flex;
@@ -176,22 +181,79 @@ header {
 }
 #exArena {
   height: 100%;
-  border-left: 2px solid $colorAlpha;
   padding: 20px;
   text-align: justify;
 }
 /*-----[services]-----*/
+#myservices {
+  margin: -13px !important;
+}
 .services {
   @include flex-centralizer;
 }
+.skill-bars {
+  margin: 10px 2px !important;
+  width: 120%;
+}
 /* ...........................................media-query............................................... */
 @media (max-width: 1199px) {
+  #experience {
+    margin-left: -40px !important;
+  }
 }
 @media (max-width: 991px) {
+  #skills {
+    margin: -5px !important;
+  }
+  #experience {
+    margin: 0 -47px !important;
+  }
+  #myservices {
+    margin: -24px !important;
+  }
+
+  .whos-left {
+    padding-right: 3rem !important;
+    margin-left: -21px !important;
+  }
 }
 @media (max-width: 767px) {
+  .skill-bars {
+    width: 160%;
+  }
+  .middleland {
+    margin-left: 70px !important;
+  }
 }
 @media (max-width: 479px) {
+  .whos-left {
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+  }
+  .middleland {
+    display: none;
+  }
+  #skills {
+    margin: 0!important;
+  }
+  #experience {
+    margin: 0!important;
+  }
+  #myservices {
+    margin: 0!important;
+  }
+  .section-title {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  #skillsRow {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -30px !important;
+  }
 }
 @media (max-width: 319px) {
 }
