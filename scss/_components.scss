@@ -10,7 +10,7 @@
 .mainSection {
   cursor: auto;
 }
-/*-----[type]-----*/
+/*----------------------[type]----------------------*/
 .typing-anima {
   width: 8.5em;
   animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
@@ -28,7 +28,7 @@
     border-color: transparent;
   }
 }
-/*-----[navigator]-----*/
+/*--------------------[navigator]--------------------*/
 .cube-wrap {
   position: fixed;
   bottom: 10vh;
@@ -40,7 +40,7 @@
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
   animation: cube 1s linear infinite;
-  transform-origin: 50% 50%;
+  transform-origin: 50% 50% 0;
 }
 @keyframes cube {
   to {
@@ -92,7 +92,7 @@
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
-/*-------[header]-------*/
+/*----------------------[header]----------------------*/
 #qmars {
   color: $colorBeta !important;
   font-weight: bold;
@@ -104,7 +104,7 @@ header {
     font-size: 1vw !important;
   }
 }
-/*-----[whos qmars]-----*/
+/*--------------------[whos qmars]--------------------*/
 .whos {
   @include flex-centralizer;
   &-left {
@@ -122,13 +122,17 @@ header {
     color: $colorDark !important;
   }
 }
-/*-------[skill]-------*/
+/*----------------------[skill]----------------------*/
 #skills {
   margin: 10px !important;
 }
 .skill {
   @include flex-centralizer;
-  height: 60vh;
+  height: 80vh;
+  &-bars {
+    margin: 10px 2px !important;
+    width: 120%;
+  }
 }
 .progressbar {
   width: 100%;
@@ -143,7 +147,7 @@ header {
   width: 10px;
   background-color: #3498db;
 }
-/*-----[experience]-----*/
+/*--------------------[experience]--------------------*/
 #experience {
   margin: -13px !important;
 }
@@ -163,7 +167,7 @@ header {
     justify-content: space-between;
     li {
       cursor: pointer;
-      padding: 20px;
+      padding: 24px 0px;
       width: 100%;
       text-align: center;
     }
@@ -184,16 +188,12 @@ header {
   padding: 20px;
   text-align: justify;
 }
-/*-----[services]-----*/
+/*--------------------[services]--------------------*/
 #myservices {
   margin: -13px !important;
 }
 .services {
   @include flex-centralizer;
-}
-.skill-bars {
-  margin: 10px 2px !important;
-  width: 120%;
 }
 /* ...........................................media-query............................................... */
 @media (max-width: 1199px) {
@@ -218,6 +218,15 @@ header {
   }
 }
 @media (max-width: 767px) {
+  #skills {
+    margin: -15px !important;
+  }
+  #experience {
+    margin: 20px -62px !important;
+  }
+  #myservices {
+    margin: 0px -70px !important;
+  }
   .skill-bars {
     width: 160%;
   }
@@ -225,7 +234,7 @@ header {
     margin-left: 70px !important;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 576px) {
   .whos-left {
     padding-right: 1rem !important;
     margin-left: 0 !important;
@@ -234,26 +243,79 @@ header {
     display: none;
   }
   #skills {
-    margin: 0!important;
+    margin: 0 !important;
   }
   #experience {
-    margin: 0!important;
+    margin: 0 !important;
   }
   #myservices {
-    margin: 0!important;
+    margin: 0 !important;
   }
   .section-title {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
     text-align: center;
-    padding-bottom: 20px;
+    padding: 30px 0;
   }
   #skillsRow {
     display: flex;
     justify-content: space-between;
     margin-left: -30px !important;
   }
+  h5 {
+    font-size: 5.3vw;
+  }
+  h1 {
+    font-size: 9.8vw;
+  }
+  #skillsRow {
+    margin-left: -23px !important;
+  }
+  .skill-bars {
+    width: 140%;
+  }
+  .services {
+    .col-sm-10 {
+      display: flex;
+      justify-content: center;
+      .card {
+        margin: 30px 10px !important;
+        &-title {
+          font-size: 4vw;
+          margin-bottom: 15px !important;
+        }
+        &-text {
+          font-size: 2.1vw;
+        }
+      }
+    }
+  }
+  .btn {
+    font-size: 2.4vw !important;
+  }
 }
 @media (max-width: 319px) {
+  .skill-bars {
+    width: 200%;
+    margin: 10px -5px !important;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  #skillsRow {
+    margin-left: -36px !important;
+  }
+  .card-body {
+    padding: 15px 0px !important;
+  }
+  .card-text {
+    font-size: 2.7vw !important;
+  }
+  .card-title {
+    font-size: 5vw;
+  }
+  footer p {
+    font-size: 0.6em;
+  }
 }

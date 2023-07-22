@@ -13,9 +13,10 @@ body {
     border-radius: 0px;
     font-family: monospace;
     font-weight: 400;
+    font-size: 1.4vw !important;
 }
 h1 {
-    font-size: 8vw;
+    font-size: 8.2vw;
     font-weight: 900 !important;
 }
 h2 {
@@ -25,7 +26,7 @@ h3 {
     font-size: 2.5em;
 }
 h5 {
-    font-size: 2vw;
+    font-size: 2.3vw;
 }
 /*classes*/
 .card{
@@ -34,11 +35,14 @@ h5 {
     border-radius: 0;
     height: 40vh;
     position: relative;
+    overflow: hidden;
     &-title {
         color: $colorAlpha;
+        font-size: 3vw;
     }
     &-text {
         text-align: justify;
+        font-size: 1.2vw;
     }
     a {
         position: absolute;
@@ -46,5 +50,11 @@ h5 {
         left: 0;
         width: 100%;
         border-top: 3px solid $colorAlpha;
+        background-color: $colorDark;
     }
+}
+.text-muted {
+    color: $colorAlpha-darker !important;
+    text-align: justify;
+    font-size: inherit;
 }

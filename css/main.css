@@ -16,10 +16,11 @@ body {
   border-radius: 0px;
   font-family: monospace;
   font-weight: 400;
+  font-size: 1.4vw !important;
 }
 
 h1 {
-  font-size: 8vw;
+  font-size: 8.2vw;
   font-weight: 900 !important;
 }
 
@@ -32,7 +33,7 @@ h3 {
 }
 
 h5 {
-  font-size: 2vw;
+  font-size: 2.3vw;
 }
 
 /*classes*/
@@ -42,12 +43,15 @@ h5 {
   border-radius: 0;
   height: 40vh;
   position: relative;
+  overflow: hidden;
 }
 .card-title {
   color: azure;
+  font-size: 3vw;
 }
 .card-text {
   text-align: justify;
+  font-size: 1.2vw;
 }
 .card a {
   position: absolute;
@@ -55,6 +59,13 @@ h5 {
   left: 0;
   width: 100%;
   border-top: 3px solid azure;
+  background-color: rgb(4, 7, 9);
+}
+
+.text-muted {
+  color: rgba(240, 255, 255, 0.551) !important;
+  text-align: justify;
+  font-size: inherit;
 }
 
 .middleland {
@@ -72,7 +83,7 @@ h5 {
   cursor: auto;
 }
 
-/*-----[type]-----*/
+/*----------------------[type]----------------------*/
 .typing-anima {
   width: 8.5em;
   animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
@@ -91,7 +102,7 @@ h5 {
     border-color: transparent;
   }
 }
-/*-----[navigator]-----*/
+/*--------------------[navigator]--------------------*/
 .cube-wrap {
   position: fixed;
   bottom: 10vh;
@@ -104,7 +115,7 @@ h5 {
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
   animation: cube 1s linear infinite;
-  transform-origin: 50% 50%;
+  transform-origin: 50% 50% 0;
 }
 
 @keyframes cube {
@@ -166,7 +177,7 @@ h5 {
   animation-fill-mode: both;
 }
 
-/*-------[header]-------*/
+/*----------------------[header]----------------------*/
 #qmars {
   color: rgb(214, 1, 1) !important;
   font-weight: bold;
@@ -179,7 +190,7 @@ header button {
   font-size: 1vw !important;
 }
 
-/*-----[whos qmars]-----*/
+/*--------------------[whos qmars]--------------------*/
 .whos {
   display: flex;
   justify-content: center;
@@ -200,7 +211,7 @@ header button {
   color: rgb(4, 7, 9) !important;
 }
 
-/*-------[skill]-------*/
+/*----------------------[skill]----------------------*/
 #skills {
   margin: 10px !important;
 }
@@ -209,7 +220,11 @@ header button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
+}
+.skill-bars {
+  margin: 10px 2px !important;
+  width: 120%;
 }
 
 .progressbar {
@@ -227,7 +242,7 @@ header button {
   background-color: #3498db;
 }
 
-/*-----[experience]-----*/
+/*--------------------[experience]--------------------*/
 #experience {
   margin: -13px !important;
 }
@@ -253,7 +268,7 @@ header button {
 }
 .exList-ul li {
   cursor: pointer;
-  padding: 20px;
+  padding: 24px 0px;
   width: 100%;
   text-align: center;
 }
@@ -273,7 +288,7 @@ header button {
   text-align: justify;
 }
 
-/*-----[services]-----*/
+/*--------------------[services]--------------------*/
 #myservices {
   margin: -13px !important;
 }
@@ -282,11 +297,6 @@ header button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.skill-bars {
-  margin: 10px 2px !important;
-  width: 120%;
 }
 
 /* ...........................................media-query............................................... */
@@ -311,6 +321,15 @@ header button {
   }
 }
 @media (max-width: 767px) {
+  #skills {
+    margin: -15px !important;
+  }
+  #experience {
+    margin: 20px -62px !important;
+  }
+  #myservices {
+    margin: 0px -70px !important;
+  }
   .skill-bars {
     width: 160%;
   }
@@ -318,7 +337,7 @@ header button {
     margin-left: 70px !important;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 576px) {
   .whos-left {
     padding-right: 1rem !important;
     margin-left: 0 !important;
@@ -340,11 +359,64 @@ header button {
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
     text-align: center;
-    padding-bottom: 20px;
+    padding: 30px 0;
   }
   #skillsRow {
     display: flex;
     justify-content: space-between;
     margin-left: -30px !important;
+  }
+  h5 {
+    font-size: 5.3vw;
+  }
+  h1 {
+    font-size: 9.8vw;
+  }
+  #skillsRow {
+    margin-left: -23px !important;
+  }
+  .skill-bars {
+    width: 140%;
+  }
+  .services .col-sm-10 {
+    display: flex;
+    justify-content: center;
+  }
+  .services .col-sm-10 .card {
+    margin: 30px 10px !important;
+  }
+  .services .col-sm-10 .card-title {
+    font-size: 4vw;
+    margin-bottom: 15px !important;
+  }
+  .services .col-sm-10 .card-text {
+    font-size: 2.1vw;
+  }
+  .btn {
+    font-size: 2.4vw !important;
+  }
+}
+@media (max-width: 319px) {
+  .skill-bars {
+    width: 200%;
+    margin: 10px -5px !important;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  #skillsRow {
+    margin-left: -36px !important;
+  }
+  .card-body {
+    padding: 15px 0px !important;
+  }
+  .card-text {
+    font-size: 2.7vw !important;
+  }
+  .card-title {
+    font-size: 5vw;
+  }
+  footer p {
+    font-size: 0.6em;
   }
 }/*# sourceMappingURL=main.css.map */
