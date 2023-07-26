@@ -113,16 +113,16 @@ $("#tailwind").LineProgressbar({
   percentage: 1,
 });
 $("#javascript").LineProgressbar({
-  percentage: 90,
+  percentage: 95,
 });
 $("#jquery").LineProgressbar({
-  percentage: 50,
+  percentage: 90,
 });
 $("#ajax").LineProgressbar({
-  percentage: 50,
+  percentage: 100,
 });
 $("#reactjs").LineProgressbar({
-  percentage: 1,
+  percentage: 10,
 });
 $("#python").LineProgressbar({
   percentage: 80,
@@ -359,3 +359,21 @@ function exLoad(url, id) {
     }
   });
 }
+// =============[faveicon]===============
+$(document).ready(function () {
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+  function favChanger(theme) {
+    $('link[rel="shortcut icon"]').attr("href","img/"+ theme + ".png");
+  }
+  function updateFavIcon() {
+    if (isDark.matches) {
+      favChanger("light");
+    } else {
+      favChanger("dark");
+    }
+  }
+  updateFavIcon();
+  isDark.addListener(function (event) {
+    updateFavIcon();
+  });
+});
