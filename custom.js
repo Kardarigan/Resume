@@ -110,13 +110,13 @@ $("#bootstrap").LineProgressbar({
   percentage: 100,
 });
 $("#tailwind").LineProgressbar({
-  percentage: 1,
+  percentage: 0,
 });
 $("#javascript").LineProgressbar({
   percentage: 95,
 });
 $("#jquery").LineProgressbar({
-  percentage: 90,
+  percentage: 95,
 });
 $("#ajax").LineProgressbar({
   percentage: 100,
@@ -128,13 +128,13 @@ $("#python").LineProgressbar({
   percentage: 80,
 });
 $("#django").LineProgressbar({
-  percentage: 20,
+  percentage: 0,
 });
 $("#mysql").LineProgressbar({
-  percentage: 1,
+  percentage: 0,
 });
 $("#maridb").LineProgressbar({
-  percentage: 1,
+  percentage: 0,
 });
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-36251023-1"]);
@@ -151,7 +151,6 @@ _gaq.push(["_trackPageview"]);
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(ga, s);
 })();
-
 // ============[naccube]==============
 window.addEventListener(
   "scroll",
@@ -163,172 +162,6 @@ window.addEventListener(
   },
   false
 );
-
-$(function () {
-  $(".exShow-item-1").show();
-  $(".exShow-item-2").hide();
-  $(".exShow-item-3").hide();
-  $(".exShow-item-4").hide();
-  $(".exBtn-1").addClass("exSelected");
-  $(".exBtn-2").removeClass("exSelected");
-  $(".exBtn-3").removeClass("exSelected");
-  $(".exBtn-4").removeClass("exSelected");
-
-  $(".groupBox1").show();
-  $(".groupBox2").hide();
-  $(".groupBox3").hide();
-  $(".group1").addClass("exSelected");
-  $(".group2").removeClass("exSelected");
-  $(".group3").removeClass("exSelected");
-
-  $(".groupNext1").hide();
-  $(".groupNext2").hide();
-  $(".groupNext3").hide();
-  $(".groupPrev1").show();
-  $(".groupPrev2").hide();
-  $(".groupPrev3").hide();
-
-  $(".exBtn-1").click(function () {
-    $(".exShow-item-1").show();
-    $(".exShow-item-2").hide();
-    $(".exShow-item-3").hide();
-    $(".exShow-item-4").hide();
-    $(".exBtn-1").addClass("exSelected");
-    $(".exBtn-2").removeClass("exSelected");
-    $(".exBtn-3").removeClass("exSelected");
-    $(".exBtn-4").removeClass("exSelected");
-  });
-  $(".exBtn-2").click(function () {
-    $(".exShow-item-1").hide();
-    $(".exShow-item-2").show();
-    $(".exShow-item-3").hide();
-    $(".exShow-item-4").hide();
-    $(".exBtn-1").removeClass("exSelected");
-    $(".exBtn-2").addClass("exSelected");
-    $(".exBtn-3").removeClass("exSelected");
-    $(".exBtn-4").removeClass("exSelected");
-  });
-  $(".exBtn-3").click(function () {
-    $(".exShow-item-1").hide();
-    $(".exShow-item-2").hide();
-    $(".exShow-item-3").show();
-    $(".exShow-item-4").hide();
-    $(".exBtn-1").removeClass("exSelected");
-    $(".exBtn-2").removeClass("exSelected");
-    $(".exBtn-3").addClass("exSelected");
-    $(".exBtn-4").removeClass("exSelected");
-  });
-  $(".exBtn-4").click(function () {
-    $(".exShow-item-1").hide();
-    $(".exShow-item-2").hide();
-    $(".exShow-item-3").hide();
-    $(".exShow-item-4").show();
-    $(".exBtn-1").removeClass("exSelected");
-    $(".exBtn-2").removeClass("exSelected");
-    $(".exBtn-3").removeClass("exSelected");
-    $(".exBtn-4").addClass("exSelected");
-  });
-  $(".group1").click(function () {
-    $(".groupBox1").show();
-    $(".groupBox2").hide();
-    $(".groupBox3").hide();
-    $(".group1").addClass("exSelected");
-    $(".group2").removeClass("exSelected");
-    $(".group3").removeClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").hide();
-    $(".groupNext3").hide();
-    $(".groupPrev1").show();
-    $(".groupPrev2").hide();
-    $(".groupPrev3").hide();
-  });
-  $(".group2").click(function () {
-    $(".groupBox1").hide();
-    $(".groupBox2").show();
-    $(".groupBox3").hide();
-    $(".group1").removeClass("exSelected");
-    $(".group2").addClass("exSelected");
-    $(".group3").removeClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").show();
-    $(".groupNext3").hide();
-    $(".groupPrev1").hide();
-    $(".groupPrev2").show();
-    $(".groupPrev3").hide();
-  });
-  $(".group3").click(function () {
-    $(".groupBox1").hide();
-    $(".groupBox2").hide();
-    $(".groupBox3").show();
-    $(".group1").removeClass("exSelected");
-    $(".group2").removeClass("exSelected");
-    $(".group3").addClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").hide();
-    $(".groupNext3").show();
-    $(".groupPrev1").hide();
-    $(".groupPrev2").hide();
-    $(".groupPrev3").hide();
-  });
-
-  $(".groupPrev1").click(function () {
-    $(".groupBox1").hide();
-    $(".groupBox2").show();
-    $(".groupBox3").hide();
-    $(".group1").removeClass("exSelected");
-    $(".group2").addClass("exSelected");
-    $(".group3").removeClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").show();
-    $(".groupNext3").hide();
-    $(".groupPrev1").hide();
-    $(".groupPrev2").show();
-    $(".groupPrev3").hide();
-  });
-  $(".groupNext2").click(function () {
-    $(".groupBox1").show();
-    $(".groupBox2").hide();
-    $(".groupBox3").hide();
-    $(".group1").addClass("exSelected");
-    $(".group2").removeClass("exSelected");
-    $(".group3").removeClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").hide();
-    $(".groupNext3").hide();
-    $(".groupPrev1").show();
-    $(".groupPrev2").hide();
-    $(".groupPrev3").hide();
-  });
-  $(".groupPrev2").click(function () {
-    $(".groupBox1").hide();
-    $(".groupBox2").hide();
-    $(".groupBox3").show();
-    $(".group1").removeClass("exSelected");
-    $(".group2").removeClass("exSelected");
-    $(".group3").addClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").hide();
-    $(".groupNext3").show();
-    $(".groupPrev1").hide();
-    $(".groupPrev2").hide();
-    $(".groupPrev3").hide();
-  });
-  $(".groupNext3").click(function () {
-    $(".groupBox1").hide();
-    $(".groupBox2").show();
-    $(".groupBox3").hide();
-    $(".group1").removeClass("exSelected");
-    $(".group2").addClass("exSelected");
-    $(".group3").removeClass("exSelected");
-    $(".groupNext1").hide();
-    $(".groupNext2").show();
-    $(".groupNext3").hide();
-    $(".groupPrev1").hide();
-    $(".groupPrev2").show();
-    $(".groupPrev3").hide();
-  });
-});
-
 // ============[experience]==============
 function exLoad(url, id) {
   var xhttp = new XMLHttpRequest();
