@@ -196,7 +196,7 @@ function exLoad(url, id) {
 $(document).ready(function () {
   const isDark = window.matchMedia("(prefers-color-scheme: dark)");
   function favChanger(theme) {
-    $('link[rel="shortcut icon"]').attr("href","img/"+ theme + ".png");
+    $('link[rel="shortcut icon"]').attr("href", "img/" + theme + ".png");
   }
   function updateFavIcon() {
     if (isDark.matches) {
@@ -210,3 +210,20 @@ $(document).ready(function () {
     updateFavIcon();
   });
 });
+// =============[firefox]================
+function detectBrowser() {
+ if (navigator.userAgent.indexOf("Firefox") > -1) {
+    return "Firefox"; 
+  } else {
+    return "other";
+  }
+}
+var browserSituation = detectBrowser();
+function changeWidthFirefox () {
+   if (browserSituation === "Firefox") {
+    $('.typing-anima').css('width', '8.8em');
+   } else {
+     $('.typing-anima').css('width', '8.3em'); 
+   }
+}
+changeWidthFirefox();

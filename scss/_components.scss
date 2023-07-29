@@ -7,13 +7,9 @@
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
 }
-.mainSection {
-  cursor: auto;
-}
 /*----------------------[type]----------------------*/
 .typing-anima {
-  width: 8.5em;
-  animation: typing 2s steps(21), blink 0.5s step-end infinite alternate;
+  animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -145,7 +141,6 @@ header {
 .proggress {
   height: 8px;
   width: 10px;
-  background-color: #3498db;
 }
 /*--------------------[experience]--------------------*/
 #experience {
@@ -233,6 +228,39 @@ header {
   .middleland {
     margin-left: 70px !important;
   }
+
+  .cube {
+    transform-origin: 0 !important;
+  }
+  .side {
+    width: 6vh;
+    height: 6vh;
+    @include border-minimal(0.5vh, $colorDark);
+
+    a {
+      i {
+        font-size: 1em;
+      }
+    }
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(2.9vh);
+  }
+  .bottom {
+    transform: rotateX(90deg) translateZ(-2.9vh);
+  }
+  .left {
+    transform: rotateY(90deg) translateZ(2.9vh);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(-2.9vh);
+  }
+  .front {
+    transform: translateZ(2.9vh);
+  }
+  .back {
+    transform: translateZ(-2.9vh);
+  }
 }
 @media (max-width: 576px) {
   .whos-left {
@@ -257,6 +285,9 @@ header {
     -o-transform: rotate(0);
     text-align: center;
     padding: 30px 0;
+  }
+  .skill {
+    height: auto;
   }
   #skillsRow {
     display: flex;
@@ -293,6 +324,10 @@ header {
   }
   .btn {
     font-size: 2.4vw !important;
+  }
+  section,
+  header {
+    margin-bottom: 40vh !important;
   }
 }
 @media (max-width: 319px) {
