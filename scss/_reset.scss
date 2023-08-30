@@ -1,7 +1,8 @@
 * {
     margin: 0 !important;
     color: $colorAlpha;
-    font-family: 'NTR', sans-serif;
+    font-family: 'LuxoraThin';
+    letter-spacing: 1px;
 }
 body {
     background-color: $colorDark !important;
@@ -16,7 +17,7 @@ body {
     font-size: 1.4vw !important;
 }
 h1 {
-    font-size: 8.2vw;
+    font-size: 7.2vw;
     font-weight: 900 !important;
 }
 h2 {
@@ -42,7 +43,7 @@ h5 {
     }
     &-text {
         text-align: justify;
-        font-size: 1rem;
+        font-size: 0.9vh;
     }
     a {
         position: absolute;

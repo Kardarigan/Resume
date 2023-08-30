@@ -122,7 +122,7 @@ $("#ajax").LineProgressbar({
   percentage: 100,
 });
 $("#reactjs").LineProgressbar({
-  percentage: 10,
+  percentage: 80,
 });
 $("#python").LineProgressbar({
   percentage: 80,
@@ -221,9 +221,9 @@ function detectBrowser() {
 var browserSituation = detectBrowser();
 function changeWidthFirefox () {
    if (browserSituation === "Firefox") {
-    $('.typing-anima').css('width', '8.8em');
+    $('.typing-anima').css('width', '9.7em');
    } else {
-     $('.typing-anima').css('width', '8.3em'); 
+     $('.typing-anima').css('width', '9.9em'); 
    }
 }
 changeWidthFirefox();

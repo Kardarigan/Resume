@@ -20,3 +20,8 @@ $colorDark: rgb(4, 7, 9);
 @mixin border-minimal($size: 2px,$color: $colorAlpha) {
   border: $size solid $color;
 }
+// ---------[fonts]---------
+@font-face {
+  font-family: LuxoraThin;
+  src: url('../font/LuxoraGrotesk-Thin.woff');
+}

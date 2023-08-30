@@ -1,356 +1,353 @@
 .middleland {
-  width: 50%;
-  border-bottom: 3px dashed $colorAlpha;
+    width: 50%;
+    border-bottom: 3px dashed $colorAlpha;
 }
 .section-title {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
 }
 /*----------------------[type]----------------------*/
 .typing-anima {
-  animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
+    animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
 }
 @keyframes typing {
-  from {
-    width: 0;
-  }
+    from {
+        width: 0;
+    }
 }
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+    50% {
+        border-color: transparent;
+    }
 }
 /*--------------------[navigator]--------------------*/
 .cube-wrap {
-  position: fixed;
-  bottom: 10vh;
-  right: 10vh;
-  perspective: 100vh;
-  z-index: 1000;
+    position: fixed;
+    bottom: 10vh;
+    right: 10vh;
+    perspective: 100vh;
+    z-index: 1000;
 }
 .cube {
-  transform-style: preserve-3d;
-  transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
-  animation: cube 1s linear infinite;
-  transform-origin: 50% 50% 0;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+    animation: cube 1s linear infinite;
+    transform-origin: 50% 50% 0;
 }
 @keyframes cube {
-  to {
-    transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
-  }
+    to {
+        transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+    }
 }
 .side {
-  position: absolute;
-  width: 10vh;
-  height: 10vh;
-  background-color: $colorAlpha;
-  backface-visibility: visible;
-  top: -5vh;
-  left: -5vh;
-  @include border-minimal(1vh, $colorDark);
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    background-color: $colorAlpha;
+    backface-visibility: visible;
+    top: -5vh;
+    left: -5vh;
+    @include border-minimal(1vh, $colorDark);
 
-  a {
-    @include flex-centralizer;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    i {
-      color: $colorDark;
-      font-size: 1.5em;
+    a {
+        @include flex-centralizer;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        i {
+            color: $colorDark;
+            font-size: 1.5em;
+        }
     }
-  }
 }
 .top {
-  transform: rotateX(90deg) translateZ(4.9vh);
+    transform: rotateX(90deg) translateZ(4.9vh);
 }
 .bottom {
-  transform: rotateX(90deg) translateZ(-4.9vh);
+    transform: rotateX(90deg) translateZ(-4.9vh);
 }
 .left {
-  transform: rotateY(90deg) translateZ(4.9vh);
+    transform: rotateY(90deg) translateZ(4.9vh);
 }
 .right {
-  transform: rotateY(90deg) translateZ(-4.9vh);
+    transform: rotateY(90deg) translateZ(-4.9vh);
 }
 .front {
-  transform: translateZ(4.9vh);
+    transform: translateZ(4.9vh);
 }
 .back {
-  transform: translateZ(-4.9vh);
+    transform: translateZ(-4.9vh);
 }
 :root .cube-wrap * {
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 /*----------------------[header]----------------------*/
 #qmars {
-  color: $colorBeta !important;
-  font-weight: bold;
+    color: $colorBeta !important;
+    font-weight: bold;
 }
 header {
-  height: 100vh;
+    height: 100vh;
 
-  button {
-    font-size: 1vw !important;
-  }
+    button {
+        font-size: 1vw !important;
+    }
 }
 /*--------------------[whos qmars]--------------------*/
 .whos {
-  @include flex-centralizer;
-  &-left {
-    @include border-minimal;
-    padding-right: 20% !important;
-  }
-  &-right {
-    width: 15em;
-    height: 15em;
-    right: 5em;
-    border-radius: 50%;
-    padding-right: 10px;
-    background-color: $colorAlpha !important;
-    position: absolute;
-    color: $colorDark !important;
-  }
+    @include flex-centralizer;
+    &-left {
+        @include border-minimal;
+        padding-right: 20% !important;
+    }
+    &-right {
+        width: 15em;
+        height: 15em;
+        right: 5em;
+        border-radius: 50%;
+        padding-right: 10px;
+        background-color: $colorAlpha !important;
+        position: absolute;
+        color: $colorDark !important;
+    }
 }
 /*----------------------[skill]----------------------*/
 #skills {
-  margin: 10px !important;
+    margin: 10px !important;
 }
 .skill {
-  @include flex-centralizer;
-  height: 80vh;
-  &-bars {
-    margin: 10px 2px !important;
-    width: 120%;
-  }
+    @include flex-centralizer;
+    height: 80vh;
+    &-bars {
+        margin: 10px 2px !important;
+        width: 120%;
+    }
 }
 .progressbar {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 35px;
-  position: relative;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    position: relative;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 5px;
 }
 .proggress {
-  height: 8px;
-  width: 10px;
+    height: 8px;
+    width: 10px;
 }
 /*--------------------[experience]--------------------*/
 #experience {
-  margin: -13px !important;
+    margin: -13px !important;
 }
 .experience {
-  @include flex-centralizer;
-  &-area {
-    height: 70%;
-    @include border-minimal;
-  }
+    @include flex-centralizer;
+    &-area {
+        height: 70%;
+        @include border-minimal;
+    }
 }
 .exList {
-  border-right: 2px solid $colorAlpha;
-  &-ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    li {
-      cursor: pointer;
-      padding: 24px 0px;
-      width: 100%;
-      text-align: center;
+    border-right: 2px solid $colorAlpha;
+    &-ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        li {
+            cursor: pointer;
+            padding: 24px 0px;
+            width: 100%;
+            text-align: center;
+        }
     }
-  }
 }
 .exBtn {
-  &:focus {
-    letter-spacing: 50px;
-  }
-  &-Active {
-    color: $colorDark;
-    background-color: $colorAlpha;
-    transition: 0.5s all;
-  }
+    &:focus {
+        letter-spacing: 50px;
+    }
+    &-Active {
+        color: $colorDark;
+        background-color: $colorAlpha;
+        transition: 0.5s all;
+    }
 }
 #exArena {
-  height: 100%;
-  padding: 20px;
-  text-align: justify;
+    height: 100%;
+    padding: 20px;
+    text-align: justify;
 }
 /*--------------------[services]--------------------*/
 #myservices {
-  margin: -13px !important;
+    margin: -13px !important;
 }
 .services {
-  @include flex-centralizer;
+    @include flex-centralizer;
 }
 /* ...........................................media-query............................................... */
 @media (max-width: 1199px) {
-  #experience {
-    margin-left: -40px !important;
-  }
+    #experience {
+        margin: 0 -53px !important;
+    }
+    #myservices {
+        margin: 0px -68px !important;
+    }
+    .card-text {
+        font-size: 1.5vw;
+    }
 }
 @media (max-width: 991px) {
-  #skills {
-    margin: -5px !important;
-  }
-  #experience {
-    margin: 0 -47px !important;
-  }
-  #myservices {
-    margin: -24px !important;
-  }
+    #skills {
+        margin: -5px !important;
+    }
+    #experience {
+        margin: 0 -72px !important;
+    }
+    #myservices {
+        margin: 0 -85px !important;
+    }
 
-  .whos-left {
-    padding-right: 3rem !important;
-    margin-left: -21px !important;
-  }
+    .whos-left {
+        padding-right: 3rem !important;
+        margin-left: -21px !important;
+    }
 }
 @media (max-width: 767px) {
-  #skills {
-    margin: -15px !important;
-  }
-  #experience {
-    margin: 20px -62px !important;
-  }
-  #myservices {
-    margin: 0px -70px !important;
-  }
-  .skill-bars {
-    width: 160%;
-  }
-  .middleland {
-    margin-left: 70px !important;
-  }
-
-  .cube {
-    transform-origin: 0 !important;
-  }
-  .side {
-    width: 6vh;
-    height: 6vh;
-    @include border-minimal(0.5vh, $colorDark);
-
-    a {
-      i {
-        font-size: 1em;
-      }
+    .middleland {
+        display: none;
     }
-  }
-  .top {
-    transform: rotateX(90deg) translateZ(2.9vh);
-  }
-  .bottom {
-    transform: rotateX(90deg) translateZ(-2.9vh);
-  }
-  .left {
-    transform: rotateY(90deg) translateZ(2.9vh);
-  }
-  .right {
-    transform: rotateY(90deg) translateZ(-2.9vh);
-  }
-  .front {
-    transform: translateZ(2.9vh);
-  }
-  .back {
-    transform: translateZ(-2.9vh);
-  }
+    .skill {
+        height: auto;
+    }
+    #skills {
+        margin: 0 !important;
+    }
+    #experience {
+        margin: 0 !important;
+    }
+    #myservices {
+        margin: 0 !important;
+    }
+    .section-title {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -o-transform: rotate(0);
+        text-align: center;
+        padding: 30px 0;
+    }
+    .skill-bars {
+        width: 160%;
+    }
+    .middleland {
+        margin-left: 70px !important;
+    }
+    #skillsRow {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -30px !important;
+    }
+    h5 {
+        font-size: 3.96vw;
+    }
+    h1 {
+        font-size: 6.8vw;
+    }
+    #skillsRow {
+        margin-left: -23px !important;
+    }
+    .skill-bars {
+        width: 140%;
+    }
+    .services {
+        .col-sm-10 {
+            display: flex;
+            justify-content: center;
+            .card {
+                margin: 30px 10px !important;
+                &-title {
+                    font-size: 4vw;
+                    margin-bottom: 15px !important;
+                }
+                &-text {
+                    font-size: 2.1vw;
+                }
+            }
+        }
+    }
+    .btn {
+        font-size: 2.4vw !important;
+    }
+    section,
+    header {
+        margin-bottom: 4vh !important;
+    }
+
+    .cube {
+        transform-origin: 0 !important;
+    }
+    .side {
+        width: 6vh;
+        height: 6vh;
+        @include border-minimal(0.5vh, $colorDark);
+
+        a {
+            i {
+                font-size: 1em;
+            }
+        }
+    }
+    .top {
+        transform: rotateX(90deg) translateZ(2.9vh);
+    }
+    .bottom {
+        transform: rotateX(90deg) translateZ(-2.9vh);
+    }
+    .left {
+        transform: rotateY(90deg) translateZ(2.9vh);
+    }
+    .right {
+        transform: rotateY(90deg) translateZ(-2.9vh);
+    }
+    .front {
+        transform: translateZ(2.9vh);
+    }
+    .back {
+        transform: translateZ(-2.9vh);
+    }
 }
 @media (max-width: 576px) {
-  .whos-left {
-    padding-right: 1rem !important;
-    margin-left: 0 !important;
-  }
-  .middleland {
-    display: none;
-  }
-  #skills {
-    margin: 0 !important;
-  }
-  #experience {
-    margin: 0 !important;
-  }
-  #myservices {
-    margin: 0 !important;
-  }
-  .section-title {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -o-transform: rotate(0);
-    text-align: center;
-    padding: 30px 0;
-  }
-  .skill {
-    height: auto;
-  }
-  #skillsRow {
-    display: flex;
-    justify-content: space-between;
-    margin-left: -30px !important;
-  }
-  h5 {
-    font-size: 5.3vw;
-  }
-  h1 {
-    font-size: 9.8vw;
-  }
-  #skillsRow {
-    margin-left: -23px !important;
-  }
-  .skill-bars {
-    width: 140%;
-  }
-  .services {
-    .col-sm-10 {
-      display: flex;
-      justify-content: center;
-      .card {
-        margin: 30px 10px !important;
-        &-title {
-          font-size: 4vw;
-          margin-bottom: 15px !important;
-        }
-        &-text {
-          font-size: 2.1vw;
-        }
-      }
+    .whos-left {
+        padding-right: 1rem !important;
+        margin-left: 0 !important;
     }
-  }
-  .btn {
-    font-size: 2.4vw !important;
-  }
-  section,
-  header {
-    margin-bottom: 40vh !important;
-  }
 }
 @media (max-width: 319px) {
-  .skill-bars {
-    width: 200%;
-    margin: 10px -5px !important;
-  }
-  h2 {
-    font-size: 1rem;
-  }
-  #skillsRow {
-    margin-left: -36px !important;
-  }
-  .card-body {
-    padding: 15px 0px !important;
-  }
-  .card-text {
-    font-size: 2.7vw !important;
-  }
-  .card-title {
-    font-size: 5vw;
-  }
-  footer p {
-    font-size: 0.6em;
-  }
+    .skill-bars {
+        width: 200%;
+        margin: 10px -5px !important;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    #skillsRow {
+        margin-left: -36px !important;
+    }
+    .card-body {
+        padding: 15px 0px !important;
+    }
+    .card-text {
+        font-size: 2.7vw !important;
+    }
+    .card-title {
+        font-size: 5vw;
+    }
+    footer p {
+        font-size: 0.6em;
+    }
 }
