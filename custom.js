@@ -221,9 +221,9 @@ function detectBrowser() {
 var browserSituation = detectBrowser();
 function changeWidthFirefox () {
    if (browserSituation === "Firefox") {
-    $('.typing-anima').css('width', '9.7em');
+    $('.typing-anima').css('width', '9.9em');
    } else {
-     $('.typing-anima').css('width', '9.9em'); 
+     $('.typing-anima').css('width', '9.5em'); 
    }
 }
 changeWidthFirefox();
